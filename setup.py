@@ -6,9 +6,6 @@ requires = [
     "boto3",
 ]
 test_requires = [
-    "black",
-    "mypy",
-    "flake8",
     "moto[s3]"
 ]
 readme = open(pathlib.Path(__file__).parent.resolve() / "README.md").read()
@@ -20,7 +17,9 @@ setup(
     long_description=readme,
     classifiers=[
         "Programming Language :: Python",
-        "Development Status :: 1 - Planning"
+        "Development Status :: 1 - Planning",
+        "Environment :: Console",
+        "Framework :: Plone",
     ],
     author="Peacock",
     author_email="contact@peacock0803sz.com",
@@ -33,7 +32,7 @@ setup(
     extras_require={"tests": test_requires},
     entry_points="""\
     [console_scripts]
-    pull = plone_sync_s3.pull:main
-    push = plone_sync_s3.push.main
+    s3sync pull = plone_sync_s3.pull:main
+    s3sync push = plone_sync_s3.push.main
     """,
 )
