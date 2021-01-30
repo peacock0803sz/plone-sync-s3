@@ -6,13 +6,13 @@ requires = [
     "boto3",
 ]
 test_requires = [
-    "moto[s3]"
+    "moto[s3]",
 ]
 readme = open(pathlib.Path(__file__).parent.resolve() / "README.md").read()
 
 setup(
     name="plone_sync_s3",
-    version="0.9.0",
+    version="0.9.3",
     description="Scripts for syncing Plone data between local and AWS S3",
     long_description=readme,
     classifiers=[
