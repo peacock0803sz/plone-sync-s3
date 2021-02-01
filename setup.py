@@ -1,18 +1,21 @@
 import pathlib
 
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages  # type: ignore
 
 requires = [
+    "click",
     "boto3",
+    "boto3-stubs[s3]",
 ]
 test_requires = [
-    "moto[s3]",
+    "pytest",
+    "moto",
 ]
 readme = open(pathlib.Path(__file__).parent.resolve() / "README.md").read()
 
 setup(
     name="plone_sync_s3",
-    version="0.9.3-alpha3",
+    version="1.0.0a1",
     description="Scripts for syncing Plone data between local and AWS S3",
     long_description=readme,
     classifiers=[
@@ -32,7 +35,6 @@ setup(
     extras_require={"tests": test_requires},
     entry_points="""\
     [console_scripts]
-    s3sync pull = plone_sync_s3.pull:main
-    s3sync push = plone_sync_s3.push.main
+    s3sync = plone_sync_s3.router:cli
     """,
 )
