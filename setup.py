@@ -15,7 +15,7 @@ readme = open(pathlib.Path(__file__).parent.resolve() / "README.md").read()
 
 setup(
     name="plone_sync_s3",
-    version="1.0.0a1",
+    version="1.0.0a2",
     description="Scripts for syncing Plone data between local and AWS S3",
     long_description=readme,
     classifiers=[
