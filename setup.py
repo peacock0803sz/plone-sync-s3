@@ -11,7 +11,7 @@ test_requires = [
     "pytest",
     "moto",
 ]
-readme = open(pathlib.Path(__file__).parent.resolve() / "README.md").read()
+readme = open(pathlib.Path(__file__).parent.resolve() / "README.rst").read()
 
 setup(
     name="plone_sync_s3",
