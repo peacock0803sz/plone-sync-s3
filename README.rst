@@ -11,10 +11,12 @@ Just run ``pip install plone_sync_s3``
 Uses
 ----
 
-`
+You Have to set AWS Credentials to ``$HOME/.aws/credentials``, or environment variables ``AWS_DEFAULT_REGION``, ``AWS_ACCESS_KEY_ID``, ``AWS_SECRET_ACCESS_KEY``.
+
+::
+
 $ s3sync push path/to/datadir
 $ s3sync pull path/to/datadir
-`
 
 Features
 --------
