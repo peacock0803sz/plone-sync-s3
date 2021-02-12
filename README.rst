@@ -1,25 +1,25 @@
-plone-sync-s3
-=============
+mr.s3
+=====
 
-Scripts syncing Plone data between local and AWS S3
+Syncing scripts Plone data between local and AWS S3
 
 Installation
 ------------
 
-Just run ``pip install plone_sync_s3``
+Just run ``pip install mr.s3``
 
 Uses
 ----
 
-You Have to set AWS Credentials to ``$HOME/.aws/credentials``.
+You have to set AWS Credentials to ``$HOME/.aws/credentials``.
 
 See also Boto3's docs. https://github.com/boto/boto3#using-boto3
 
 
 ::
 
-$ s3sync push path/to/datadir
-$ s3sync pull path/to/datadir
+$ mr.s3 push path/to/datadir  # uploading
+$ mr.s3 pull path/to/datadir  # downloading
 
 Features
 --------

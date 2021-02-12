@@ -14,13 +14,13 @@ test_requires = [
 readme = open(pathlib.Path(__file__).parent.resolve() / "README.rst").read()
 
 setup(
-    name="plone_sync_s3",
-    version="1.0.0b1",
-    description="Scripts for syncing Plone data between local and AWS S3",
+    name="mr.s3",
+    version="1.0.0b2",
+    description="Syncing scripts Plone data between local and AWS S3",
     long_description=readme,
     classifiers=[
-        "Programming Language :: Python",
-        "Development Status :: 1 - Planning",
+        "Programming Language :: Python :: 3",
+        "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Framework :: Plone",
     ],
@@ -35,6 +35,6 @@ setup(
     extras_require={"tests": test_requires},
     entry_points="""\
     [console_scripts]
-    s3sync = plone_sync_s3.router:cli
+    mr.s3 = plone_sync_s3.router:cli
     """,
 )
