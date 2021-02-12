@@ -15,7 +15,7 @@ readme = open(pathlib.Path(__file__).parent.resolve() / "README.rst").read()
 
 setup(
     name="mr.s3",
-    version="1.0.0b2",
+    version="1.0.0b3",
     description="Syncing scripts Plone data between local and AWS S3",
     long_description=readme,
     classifiers=[
@@ -26,7 +26,7 @@ setup(
     ],
     author="Peacock",
     author_email="contact@peacock0803sz.com",
-    url="https://github.com/peacock0803sz/plone-sync-s3",
+    url="https://github.com/peacock0803sz/mr.s3",
     keywords="Plone Python AWS",
     packages=find_packages(),
     include_package_data=True,
@@ -35,6 +35,6 @@ setup(
     extras_require={"tests": test_requires},
     entry_points="""\
     [console_scripts]
-    mr.s3 = plone_sync_s3.router:cli
+    mr.s3 = mr_s3.router:cli
     """,
 )
