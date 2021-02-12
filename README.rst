@@ -11,7 +11,10 @@ Just run ``pip install plone_sync_s3``
 Uses
 ----
 
-You Have to set AWS Credentials to ``$HOME/.aws/credentials``, or environment variables ``AWS_DEFAULT_REGION``, ``AWS_ACCESS_KEY_ID``, ``AWS_SECRET_ACCESS_KEY``.
+You Have to set AWS Credentials to ``$HOME/.aws/credentials``.
+
+See also Boto3's docs. https://github.com/boto/boto3#using-boto3
+
 
 ::
 
